@@ -1,198 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Akira Uchiyama</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research — Akira Uchiyama</title>
+  <meta name="description" content="Research projects of Akira Uchiyama: battery-less IoT, urban context recognition, healthcare, and mobile localization.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> 
-    <div class="container">
-      <a class="navbar-brand" href="#">Akira Uchiyama</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="research.html">Research
-<span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="achievement.html">Achievement</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#services">Professional Services</a>
-          </li>
-        </ul>
-      </div>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Akira Uchiyama</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="research.html">Research</a></li>
+        <li><a href="achievement.html">Achievement</a></li>
+        <li><a href="index.html#services">Services</a></li>
+      </ul>
     </div>
   </nav>
-  
 
-  <!-- Page Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-left">
-        <h2>Current Research Areas</h2>
-        <p> My current research interests are principally in the following areas:
-<ul>
-            <li> Mobile Sensing and Computing (IoT-based sensing, backscatter sensing)</li>
-            <li> Context Recognition (Congestions in urban areas, human activities)</li>
-            <li> Healthcare (Body core temperature estimation) </li>
-</ul>
-        </p>
-</div>
-</div>
-<div class="row">
-<div class="col-md-6 text-justify">
-<h4>Battery-less IoT</h4>
-<p>The number of IoT devices is expected to be enormous, causing huge effort to maintain batteries. In this research, I realize cooperation among battery-less sensors by combining energy harvesting and ambient backscatter which connects sensors wirelessly with tiny energy consumption. The goal is to develop technologies for “Sustainable IoT platform”, which combines energy harvested at multiple devices to satisfy application requirements.</p>
-</div>
-<div class="col-md-6">
-  <img class="img-responsive center-block" src="ambient backscatter.png" width="500px" alt="battery-less sensing" />
-</div>
-</div>
+  <main>
+    <h1>Research</h1>
+    <p class="lead">
+      My current interests are in mobile sensing and computing (IoT-based sensing, backscatter sensing),
+      context recognition (urban congestion, human activities), and healthcare (e.g., body core temperature estimation).
+    </p>
 
-<div class="row mt-md-3">
-<div class="col-md-7 text-justify">
-<h4>Urban Context Recognition</h4>
-
-<h5>CrowdMeter: Congestion Estimation in Train Stations</h5>
-
-<p>
-  We propose CrowdMeter: a participatory system that leverages the sensed data
-collected from users' phones during their daily train commutes to gauge the
-real-time congestion level in railway stations. CrowdMeter tracks the passenger's
-position in the station as well as identifies her/his context (e.g., waiting
-for a train, buying a ticket) along with her trajectory from the station's entrance
-to the train. Therefrom, CrowdMeter extracts novel features, based on
-the user's location and context, from the phone sensors. These features capture
-the passenger's behavior (e.g., the walking pattern) and the ambient environment
-characteristics (e.g., the ambient sound) that can indicate the surrounding
-congestion level along the passenger's route in a railway station. Finally, the
-system highlights each area of the station with a specific color (blue, yellow
-or red) that corresponds to one of three congestion levels (low, medium and
-high). Evaluation of CrowdMeter through a field experiment in 29 different
-train stations in Japan shows that it can infer the congestion levels accurately,
-highlighting its promise as a ubiquitous travel-support service.
-</p>
-</div>
-<div class="col-md-5">
-  <img class="center-block" src="CrowdMeter.png" width="400px" alt="CrowdMeter" />
-</div>
-</div>
-
-<div class="row mt-md-3">
-<div class="col-md-6 text-justify">
-<h5>TransitLabel: Semanticin Train Stations</h5>
-
-<p>
-We propose TransitLabel, a crowd-sensing system for automatic enrichment of transit stations indoor floorplans with different semantics like ticket vending machines, entrance gates, drink vending machines, platforms, cars’ waiting lines, restrooms, lockers, waiting (sitting) areas, among others. Our key observations show that certain passengers’ activities (e.g., purchasing tickets, crossing entrance gates, etc) present identifiable signatures on one or more cellphone sensors. TransitLabel leverages this fact to automatically and unobtrusively recognize different passengers’ activities, which in turn are mined to infer their uniquely associated stations semantics. Furthermore, the locations of the discovered semantics are automatically estimated from the inaccurate passengers’ positions when these semantics are identified.
-We evaluate TransitLabel through a field experiment in eight different train stations in Japan. Our results show that TransitLabel can detect the fine-grained stations semantics accurately with 7.7% false positive rate and 7.5% false negative rate on average. In addition, it can consistently detect the location of discovered semantics accurately, achieving an error within 2.5m on average for all semantics. Finally, we show that TransitLabel has a small energy footprint on cellphones, could be generalized to other stations, and is robust to different phone placements; highlighting its promise as a ubiquitous indoor maps enriching service.
-</p>
-</div>
-<div class="col-md-6">
-  <img class="img-responsive mx-auto d-bloc" src="TransitLabel.png" width="500px" alt="TransitLabel" />
-</div>
-</div>
-
-<div class="row mt-md-3">
-<div class="col-md-6 text-justify">
-<h4>Healthcare</h4>
-<h5>Core Temperature Estimation</h5>
-<p>We proposed a novel method to estimate core temperature based on a human thermal model considering individual differences. The method employs Gagge’s two-node model to simulate the change of core and skin temperature by calculating heat production in the body and heat exchange between the core node, the skin node, and the environment. In the warm-up, the proposed method determines the optimal parameter set representing individual thermoregulation function and physical feature through exhaustive simulation for comprehensive combinations of parameters. We also proposed various modifications for the original model in order to improve the estimation accuracy such as delaying thermal transfer and thermoregulation response. We have evaluated the proposed method through more than 120 hours of real experiments in running, walking, biking and tennis. The results show that the proposed method can successfully determine parameter sets which reduce estimation errors. The novel idea to estimate core body temperature by fusion of multimodal sensor data was very successful, leading to the collaboration with several companies and researchers in other fields. 
-</p>
-</div>
-<div class="col-md-6">
-  <img class="img-responsive mx-auto d-bloc" src="coretemp.png" width="500px" alt="core temperature estimation" />
-</div>
-</div>
-
-<div class="row mt-md-3">
-<div class="col-md-12 text-justify">
-<h5>FluidMeter: Fluid Intake Amount Estimation</h5>
-<p>Water is the most vital nutrient in the human body accounting for about 60% of the body weight. To maintain optimal health,
-it is important for humans to consume a sufficient amount of fluids daily. Therefore, tracking the amount of human daily fluid
-intake has a myriad of health applications like dehydration prevention.
-In this research, we present FluidMeter: a ubiquitous and unobtrusive system to track the amount of fluid intake leveraging
-the inertial sensors embedded in smartwatches. To achieve this, FluidMeter first separates the drinking activities from other
-human activities (playing, running, eating, etc.). Thereafter, it analyzes the sampled sensors data during the extracted drinking
-episodes to recognize the sequence of micro-activities (lift the bottle, sip, release the bottle) that constitute the drinking
-activity. Finally, it applies some machine learning algorithms on some features extracted from sampled sensor data during the
-sipping period to gauge the amount of fluid intake in the designated drinking episode.
-FluidMeter is evaluated by collecting more than 260 hours of different human activities by 70 different participants using
-different smartwatch models. The results show that FluidMeter can recognize the drinking activity and its micro-activities
-accurately which is comparable to that achieved by the state-of-the-art techniques. Finally, FluidMeter can estimate the overall
-amount of fluid intake in grams accurately with a estimation error limited to 15%, highlighting its promise as a ubiquitous
-health service.
-</p>
-</div>
-</div>
-<div class="center-block col-md-12">
-  <img class="img-responsive center-block" src="FluidMeter.png" width="600px" alt="FluidMeter" />
-</div>
-
-<div class="row mt-md-3">
-<div class="col-md-7 text-justify">
-        <h4>Mobile Localization</h4>
-              <p> We proposed a novel idea leveraging ad hoc communication among mobile devices to improve localization performance. In this work, we proposed an opportunistic ad-hoc localization algorithm called Urban Pedestrians Localization (UPL), for estimating locations of mobile nodes in urban districts. The design principles of UPL are twofold. First, UPL assumes that location landmarks are deployed sparsely due to deployment-cost constraints. Thus, most mobile nodes cannot expect to meet these location landmarks frequently. Each mobile node in UPL relies on location information received from its neighboring mobile nodes instead in order to estimate its area of presence in which the node is expected to exist. Although the area of presence of each mobile node becomes inexact as it moves, it can be used to reduce the areas of presence of the others. Second, UPL employs information about obstacles such as walls and presents an algorithm to calculate the movable areas of mobile nodes considering obstacles for predicting the area of presence of mobile nodes accurately under mobility. This also helps to reduce each node’s area of presence. The experimental results have shown that UPL could limit the positioning error to 0.7r on average by the above two key ideas, where r denotes the radio range.
-              </p>
-              <p>
-                Also, we worked for mobile phone localization for firefighters. The localization method utilizes WiFi directional antennas placed around a target building. We also published several works related to localization in international conferences and journal papers for novel metrics considering relative positions, people density estimation, and GPS improvement.
-              </p>
-            </div>
-<div class="col-md-5">
- 
- <div class="row mt-md-5">
-    <div class="col-md-12">
-      <img class="img-responsive center-block" src="UPL_teaser.png" width="200px" alt="UPL" />
+    <div class="section-title"><h2>Battery-less IoT</h2></div>
+    <div class="project">
+      <div class="project-text">
+        <p>The number of IoT devices is expected to be enormous, causing huge effort to maintain batteries. In this research, I realize cooperation among battery-less sensors by combining energy harvesting and ambient backscatter, which connects sensors wirelessly with tiny energy consumption. The goal is to develop technologies for a “Sustainable IoT platform” that combines energy harvested at multiple devices to satisfy application requirements.</p>
+      </div>
+      <div class="project-figure">
+        <img src="images/ambient backscatter.png" alt="Battery-less sensing">
+      </div>
     </div>
-    <div class="col-md-12">
-      <img class="img-responsive mx-auto" src="firefighter.png" width="400px" alt="UPL" />
+
+    <div class="section-title"><h2>Urban Context Recognition</h2></div>
+
+    <div class="project reverse">
+      <div class="project-figure">
+        <img src="images/CrowdMeter.png" alt="CrowdMeter">
+      </div>
+      <div class="project-text">
+        <h4>CrowdMeter — Congestion Estimation in Train Stations</h4>
+        <p>CrowdMeter is a participatory system that leverages sensor data collected from users' phones during their daily train commutes to gauge real-time congestion in railway stations. It tracks each passenger's position and identifies their context (waiting for a train, buying a ticket, etc.) along the trajectory from the entrance to the train. From these, novel features capture the passenger's behavior (walking pattern) and ambient environment (sound) that indicate congestion. The system highlights each area with a color (blue / yellow / red) for low / medium / high congestion. Field experiments at 29 different train stations in Japan show CrowdMeter infers congestion accurately, highlighting its promise as a ubiquitous travel-support service.</p>
+      </div>
     </div>
-  </div>
-</div>
-</div>
 
-<div class="row">
-      <div class="col-md-12 text-justify">
-                    <h2>Funded Research Projects</h2>
-        <!-- My research efforts are funded by the following funding sources and grants:-->
-        <ul>
-          <li>"Development of Sustainable IoT Platform by Wireless Sensing", Principal Investigator, Japan Science and Technology Agency
- PRESTO, 2019-2022.</li>
-          <li>"Development of battery less sensing systems using ambient backscatter communication", Co-Investigator, JSPS Grant-in-Aid for Scientific Research (KAKENHI) Challenging Research (Pioneering), 2018-present.</li>
-          <li>"Sports Research Innovation Project (SRIP)", Japan Sports Agency, Ministry of Education, Culture, Sports, Science and Technology (MEXT), 2015-present.</li>
-          <li>"Context Sensing by Participatory Sensing in Urban Transportation", Pricipal Investigator, JSPS Grant-in-Aid for Young Scientists (A), 2014-2017.</li>
-          <li>"Development of Sustainable IoT Platform by Cooperative Battery-less Sensors", Principal Investigator, Japan Science and Technology Agency
- ACT-I, 2016-2017.</li>
-          <li>"Real Time and Low Cost Core Temperature Estimation Using Wearable Sensors", Principal Investigator, JSPS Grant-in-Aid for Challenging Exploratory Research, 2014-2015.</li>
-          <li>"Robust and Low Cost WLAN Localization for Device Heterogeneity", Principal Investigator, JSPS Grant-in-Aid for Young Scientists (B), 2011-2013.</li>
-          <li>"Highly Efficient Density Estimation for Mobile Nodes using Ad Hoc Communication in Ubiquitous Networks", Principal Investigator, JSPS Grant-in-Aid for Research Activity Start-up, 2009-2010.</li>
-        </ul>
-          </div>
-        </div></div>
-          <!-- Bootstrap core JavaScript -->
-          <script src="vendor/jquery/jquery.min.js"></script>
-          <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <div class="project">
+      <div class="project-text">
+        <h4>TransitLabel — Semantics in Train Stations</h4>
+        <p>TransitLabel is a crowd-sensing system for automatic enrichment of transit-station indoor floorplans with semantics like ticket vending machines, entrance gates, drink vending machines, platforms, waiting lines, restrooms, lockers, and waiting areas. Certain passenger activities (purchasing tickets, crossing entrance gates, etc.) present identifiable signatures on phone sensors, which TransitLabel uses to recognize activities and infer their associated semantics. Locations are estimated from inaccurate passenger positions when each semantic is identified. A field experiment in eight stations in Japan showed accurate detection of fine-grained semantics (7.7% FP, 7.5% FN on average), with locations within ~2.5 m on average — and a small energy footprint on cellphones.</p>
+      </div>
+      <div class="project-figure">
+        <img src="images/TransitLabel.png" alt="TransitLabel">
+      </div>
+    </div>
 
-        </body>
+    <div class="section-title"><h2>Healthcare</h2></div>
 
-        </html>
+    <div class="project reverse">
+      <div class="project-figure">
+        <img src="images/coretemp.png" alt="Core temperature estimation">
+      </div>
+      <div class="project-text">
+        <h4>Core Body Temperature Estimation</h4>
+        <p>We proposed a novel method to estimate core body temperature using a human thermal model that accounts for individual differences. The method employs Gagge's two-node model to simulate change of core and skin temperature by calculating heat production and heat exchange between the core node, the skin node, and the environment. In a warm-up phase, the optimal parameter set representing individual thermoregulation function and physical features is determined through exhaustive simulation. Multiple modifications to the original model — delaying thermal transfer, thermoregulation response, etc. — improved accuracy. Across 120+ hours of running, walking, biking and tennis, the method successfully reduces estimation error, leading to collaborations with several companies and researchers in other fields.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-text">
+        <h4>FluidMeter — Fluid Intake Amount Estimation</h4>
+        <p>Water is the most vital nutrient in the human body, accounting for about 60% of body weight. To maintain optimal health, it is important to consume sufficient fluids daily. FluidMeter is a ubiquitous and unobtrusive system that tracks fluid intake using inertial sensors in smartwatches. It first separates drinking from other activities (playing, running, eating), then recognizes the sequence of micro-activities (lift the bottle, sip, release the bottle) and applies machine learning to estimate intake from sipping-period features. Evaluated on 260+ hours of activities from 70 participants and multiple smartwatch models, FluidMeter recognizes drinking and its micro-activities accurately and estimates the overall amount of fluid intake in grams within 15% error.</p>
+      </div>
+      <div class="project-figure">
+        <img src="images/FluidMeter.png" alt="FluidMeter">
+      </div>
+    </div>
+
+    <div class="section-title"><h2>Mobile Localization</h2></div>
+    <div class="project reverse">
+      <div class="project-figure">
+        <img src="images/UPL_teaser.png" alt="UPL" style="margin-bottom:1rem;">
+        <img src="images/firefighter.png" alt="Firefighter localization">
+      </div>
+      <div class="project-text">
+        <p>We proposed an opportunistic ad-hoc localization algorithm — Urban Pedestrians Localization (UPL) — for estimating the locations of mobile nodes in urban districts. UPL assumes location landmarks are deployed sparsely due to deployment-cost constraints, so most mobile nodes cannot expect to meet landmarks frequently. Each node instead relies on location information received from neighboring nodes to estimate its area of presence. Although the area becomes inexact under motion, it can be used to reduce the areas of presence of others. UPL also leverages information about obstacles such as walls and computes movable areas under mobility for accurate prediction. Experiments showed UPL limits positioning error to 0.7r on average, where r is the radio range.</p>
+        <p>We also worked on mobile-phone localization for firefighters using WiFi directional antennas placed around a target building, plus several works on relative-position metrics, people-density estimation, and GPS improvement.</p>
+      </div>
+    </div>
+
+    <div class="section-title"><h2>Funded Research Projects</h2></div>
+    <div class="card">
+      <ul>
+        <li>“Integrated Sensing and Communication Edge–Mobile Core Integrated Control,” NICT Innovative ICT R&amp;D Commissioned Research, 2024–2027.</li>
+        <li>“Behavior Recognition Bootstrapping Mechanism in Wireless Sensing,” Principal Investigator, JSPS Grant-in-Aid for Scientific Research (B), 2024–2026.</li>
+        <li>“Virtual Sensing Platform ‘Vsens’ and Orthopedic Disorder Estimation / Recovery Support System,” JST AIP Acceleration Program, 2025–2026.</li>
+        <li>“Ambient Awareness Technologies Using Passive IoT Device Networks,” Co-Investigator, JSPS Grant-in-Aid for Scientific Research (S), 2019–2024.</li>
+        <li>“Development of Sustainable IoT Platform by Wireless Sensing,” Principal Investigator, JST PRESTO (Sakigake), 2019–2023.</li>
+        <li>“Development of Battery-less Sensing Systems Using Ambient Backscatter Communication,” Co-Investigator, JSPS KAKENHI Challenging Research (Pioneering), 2018–2022.</li>
+        <li>“Development of Sustainable IoT Platform by Cooperative Battery-less Sensors,” Principal Investigator, JST ACT-I, 2016–2017.</li>
+        <li>“Sports Research Innovation Project (SRIP),” Japan Sports Agency, MEXT, 2015–present.</li>
+        <li>“Context Sensing by Participatory Sensing in Urban Transportation,” Principal Investigator, JSPS Grant-in-Aid for Young Scientists (A), 2014–2017.</li>
+        <li>“Real-Time and Low-Cost Core Temperature Estimation Using Wearable Sensors,” Principal Investigator, JSPS Grant-in-Aid for Challenging Exploratory Research, 2014–2015.</li>
+        <li>“Robust and Low-Cost WLAN Localization for Device Heterogeneity,” Principal Investigator, JSPS Grant-in-Aid for Young Scientists (B), 2011–2013.</li>
+        <li>“Highly Efficient Density Estimation for Mobile Nodes using Ad Hoc Communication in Ubiquitous Networks,” Principal Investigator, JSPS Grant-in-Aid for Research Activity Start-up, 2009–2010.</li>
+      </ul>
+      <p style="color:var(--text-soft); font-size:0.9rem; margin-top:1rem; margin-bottom:0;">
+        Source: <a href="https://researchmap.jp/utiyama/research_projects" class="ext">researchmap</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer>© Akira Uchiyama · Osaka University</footer>
+</body>
+</html>
