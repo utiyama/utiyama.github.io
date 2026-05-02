@@ -278,3 +278,21 @@ a.ext::after {
   font-size: 0.85em;
   color: var(--text-soft);
 }
+
+/* Career / timeline list */
+.career {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.55rem 1.25rem;
+  margin: 0;
+}
+.career dt {
+  color: var(--text-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.career dd { margin: 0; }
+@media (max-width: 520px) {
+  .career { grid-template-columns: 1fr; gap: 0.15rem 0; }
+  .career dt { padding-top: 0.5rem; }
+}
